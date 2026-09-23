@@ -40,7 +40,26 @@ namespace WpfApp1
             }
 
             txtRGB.Text = $"RGB: {red}, {green}, {blue}";
+
+            redRGB.Text = $"{red}";
+            greenRGB.Text = $"{green}";
+            blueRGB.Text = $"{blue}";
+
+            txtHEX.Text = $"HEX: #{red:X2}{green:X2}{blue:X2}";
+
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            sliderRed.Value = 0;
+            sliderGreen.Value = 0;
+            sliderBlue.Value = 0;
+
+            redRGB.Text = "0";
+            greenRGB.Text = "0";
+            blueRGB.Text = "0";
+
+            txtHEX.Text = $"HEX: #000000";
+        }
     }
 }

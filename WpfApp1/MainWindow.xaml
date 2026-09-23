@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="750" Width="400"
+        Title="MainWindow" Height="850" Width="400"
         Background="#f1f1fa">
     
     <Grid Margin="20">
@@ -13,20 +13,29 @@
             <TextBlock Text="Slider color maker" FontSize="32" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,20,0,50"/>
 
             <TextBlock Text="Red" FontSize="24" FontWeight="Bold" Margin="5,0,5,0"/>
+            <TextBlock Text="0" x:Name="redRGB" HorizontalAlignment="Right"></TextBlock>
             <Slider x:Name="sliderRed" Minimum="0" Maximum="255" Value="0" Margin="5,0,5,0" ValueChanged="sliderChange"/>
             
             <TextBlock Text="Green" FontSize="24" FontWeight="Bold" Margin="5,20,5,0"/>
+            <TextBlock Text="0" x:Name="greenRGB" HorizontalAlignment="Right"></TextBlock>
             <Slider x:Name="sliderGreen" Minimum="0" Maximum="255" Value="0" Margin="5,0,5,0" ValueChanged="sliderChange"/>
             
             <TextBlock Text="Blue" FontSize="24" FontWeight="Bold" Margin="5,20,5,0"/>
+            <TextBlock Text="0" x:Name="blueRGB" HorizontalAlignment="Right"></TextBlock>
             <Slider x:Name="sliderBlue" Minimum="0" Maximum="255" Value="0" ValueChanged="sliderChange"/>
 
-            <Border x:Name="colorPreview" Height="200" Background="#000000" CornerRadius="20" BorderBrush="white" BorderThickness="5" Margin="5,50,5,5">
+            <Border x:Name="colorPreview" Height="150" Background="#000000" CornerRadius="20" BorderBrush="white" BorderThickness="5" Margin="5,50,5,10">
                 <TextBlock Text="SZÍN MINTA" x:Name="txtColorPreview" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="24" FontWeight="Bold" Foreground="white"></TextBlock>
+            </Border>
+            <Border Background="white" CornerRadius="20">
+                <Button BorderThickness="0" Background="LightGray" Height="50" FontSize="16" Content="RESET" Click="Button_Click"></Button>
+            </Border>
+            <Border Background="white" CornerRadius="20" Margin="0,20,0,0" Padding="15">
+                <TextBlock x:Name="txtRGB" Text="RGB: 0, 0, 0" HorizontalAlignment="Center" FontSize="16" Foreground="Black" ></TextBlock>
             </Border>
 
             <Border Background="white" CornerRadius="20" Margin="0,20,0,0" Padding="15">
-                <TextBlock x:Name="txtRGB" Text="RGB 0, 0, 0" HorizontalAlignment="Center" FontSize="16" Foreground="Black" ></TextBlock>
+                <TextBlock x:Name="txtHEX" Text="HEX: #000000" HorizontalAlignment="Center" FontSize="16" Foreground="Black" ></TextBlock>
             </Border>
 
         </StackPanel>
